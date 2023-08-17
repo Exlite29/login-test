@@ -66,7 +66,7 @@ const AuthContainer = () => {
     );
 
     return () => unsubscribe();
-  }, []);
+  }, [authMode]);
 
   const changeAuthMode = () => {
     setAuthMode(authMode === "signin" ? "signup" : "signin");
