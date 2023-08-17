@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SignIn from "./signin";
 import SignUp from "./signup";
 import UserPage from "./UserPage";
@@ -52,7 +52,7 @@ const AuthContainer = () => {
       });
   };
 
-  /* useEffect(() => {
+  useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(
       (user) => {
         if (user) {
@@ -66,7 +66,7 @@ const AuthContainer = () => {
     );
 
     return () => unsubscribe();
-  }, []); */
+  }, []);
 
   const changeAuthMode = () => {
     setAuthMode(authMode === "signin" ? "signup" : "signin");
