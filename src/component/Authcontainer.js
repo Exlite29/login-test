@@ -52,7 +52,7 @@ const AuthContainer = () => {
       });
   };
 
-  useEffect(() => {
+  /* useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(
       (user) => {
         if (user) {
@@ -66,7 +66,7 @@ const AuthContainer = () => {
     );
 
     return () => unsubscribe();
-  }, []);
+  }, []); */
 
   const changeAuthMode = () => {
     setAuthMode(authMode === "signin" ? "signup" : "signin");
